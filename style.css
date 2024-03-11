@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
 body {
   background: rgba(0, 0, 0, 0.082);
@@ -6,6 +6,11 @@ body {
   flex-direction: column;
   min-height: 100vh; /* Ensure the body takes at least the full viewport height */
   margin: 0;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
 }
 .page-wrapper {
   flex: 1; /* Take remaining vertical space */
@@ -13,7 +18,7 @@ body {
 }
 
 .cards {
-  margin-top: 100px;
+  margin-top: 10px;
   margin-bottom: 150px;
 }
 
@@ -45,7 +50,7 @@ body {
 
 .card {
   height: 379px;
-  width: 300px;
+  width: 300px; /* Corrected width value */
   background: grey;
   border-radius: 10px;
   transition: background 0.8s;
@@ -56,6 +61,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
+  font-family: "Inter", sans-serif; /* Add this line */
 }
 
 .card0 {
@@ -71,36 +77,111 @@ body {
 }
 
 .card:hover h2,
-.card:hover .fab {
+.card:hover .fab,
+.card:hover .fa {
   opacity: 1;
 }
 
 .card1 {
+  background: url("./assets/img/monte3.png") center center no-repeat;
+  background-size: 320px;
+  /* background-position: 50% 20%; */
+}
+
+.card1:hover {
+  background: url("./assets/img/monte3.png") left center no-repeat;
+  background-size: 600px;
+}
+
+.card2 {
+  background: url("https://bordalo.observador.pt/v2/q:84/rs:fill:2731:4096/c:2731:4096:nowe:0:0/plain/https://s3.observador.pt/wp-content/uploads/2022/01/07102616/jporfirio-entrevista-andre-ventura-8-scaled.jpg")
+    center center no-repeat;
+  background-size: 300px;
+  /* background-position: 50% 20%; */
+}
+
+.card2:hover {
+  background: url("https://bordalo.observador.pt/v2/q:84/rs:fill:2731:4096/c:2731:4096:nowe:0:0/plain/https://s3.observador.pt/wp-content/uploads/2022/01/07102616/jporfirio-entrevista-andre-ventura-8-scaled.jpg")
+    left center no-repeat;
+  background-size: 600px;
+}
+
+.card3 {
+  background: url("https://i0.wp.com/www.noticiasdecoimbra.pt/wp-content/uploads/2022/12/Rui-Rocha.jpeg?fit=1024%2C1024&ssl=1")
+    center center no-repeat;
+  background-size: 400px;
+  /* background-position: 50% 20%; */
+}
+
+.card3:hover {
+  background: url("https://i0.wp.com/www.noticiasdecoimbra.pt/wp-content/uploads/2022/12/Rui-Rocha.jpeg?fit=1024%2C1024&ssl=1")
+    left center no-repeat;
+  background-size: 600px;
+}
+
+.card4 {
+  background: url("https://d1mnxluw9mpf9w.cloudfront.net/media/10169/Mariana-Mortagua.jpg")
+    center center no-repeat;
+  background-size: 400px;
+  /* background-position: 50% 20%; */
+}
+
+.card4:hover {
+  background: url("https://d1mnxluw9mpf9w.cloudfront.net/media/10169/Mariana-Mortagua.jpg")
+    left left no-repeat;
+  background-size: 700px;
+}
+
+.card5 {
+  background: url("./assets/img/raimundo.png") center center no-repeat;
+  background-size: 400px;
+  /* background-position: 50% 20%; */
+}
+
+.card5:hover {
+  background: url("./assets/img/raimundo.png") left center no-repeat;
+  background-size: 700px;
+}
+
+.card6 {
+  background: url("./assets/img/tavares2.png") center center no-repeat;
+  background-size: 400px;
+  /* background-position: 50% 20%; */
+}
+
+.card6:hover {
+  background: url("./assets/img/tavares2.png") left center no-repeat;
+  background-size: 700px;
+}
+
+.card7 {
+  background: url("https://www.sulinformacao.pt/wp-content/uploads/2022/01/ines-de-sousa-real.jpg")
+    center center no-repeat;
+  background-size: 500px;
+  /* background-position: 50% 20%; */
+}
+
+.card7:hover {
+  background: url("https://www.sulinformacao.pt/wp-content/uploads/2022/01/ines-de-sousa-real.jpg")
+    left center no-repeat;
+  background-size: 700px;
+}
+
+.card8 {
   background: url("https://upload.wikimedia.org/wikipedia/commons/6/6e/Lu%C3%ADs_Montenegro.jpg")
     center center no-repeat;
   background-size: 300px;
   /* background-position: 50% 20%; */
 }
 
-.card1:hover {
+.card8:hover {
   background: url("https://upload.wikimedia.org/wikipedia/commons/6/6e/Lu%C3%ADs_Montenegro.jpg")
     left center no-repeat;
   background-size: 600px;
 }
 
-.card2 {
-  background: url("./assets/img/ventura.png") center center no-repeat;
-  background-size: 390px;
-  /* background-position: 50% 20%; */
-}
-
-.card2:hover {
-  background: url("./assets/img/ventura.png") left center no-repeat;
-  background-size: 600px;
-}
-
 h2 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
@@ -110,7 +191,8 @@ h2 {
   transition: opacity 1s;
 }
 
-.fab {
+.fab,
+.fa {
   opacity: 0;
   transition: opacity 1s;
 }
@@ -119,13 +201,19 @@ h2 {
   position: absolute;
   fill: #fff;
   color: #fff;
-  height: 80px;
-  top: 266px;
-  width: 50px;
+  height: 100px;
+  top: 260px;
+  width: 270px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   justify-content: space-around;
+  margin-left: 10px;
+  letter-spacing: 0.1rem;
+}
+
+.fa-side {
+  letter-spacing: 0.2rem !important;
 }
 
 /* FOOTER */
